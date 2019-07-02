@@ -1,7 +1,6 @@
-<? php
-include 'regis.php';
-?>
-
+ <?php
+ include 'regis.php';
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +35,8 @@ include 'regis.php';
     </div>
   </section><br><br> <br>
   <div >
-  <form  method="POST" enctype="multipart/form-data" action="regis.php">
+
+  <form  method="POST" >
     <div>
     <h2>Register</h2>
   </div>
@@ -44,27 +44,27 @@ include 'regis.php';
      <div class="col-md-6">
       <div class="input-group">
        <label>Admission Number </label> 
-       <input type="text" name="adm_no" required>
+       <input type="text" name="admno" required>
      </div>
    </div>
    <div class="col-md-6">
      <div class="input-group">
-      <label>Last Name:</label> 
-       <input type="text" name="last_name" required>
+      <label>First Name:</label> 
+       <input type="text" name="firstname" required>
      </div>
    </div>
  </div>
   <div class="col-md-12">
      <div class="col-md-6">
       <div class="input-group">
-       <label>First Name: </label> 
-       <input type="text" name="first_name" required>
+       <label>Second Name: </label> 
+       <input type="text" name="secondname" required>
      </div>
    </div>
    <div class="col-md-6">
      <div class="input-group">
-      <label>Other Name:</label> 
-       <input type="text" name="other_name">
+      <label>Third Name:</label> 
+       <input type="text" name="thirdname">
      </div>
    </div>
  </div>
@@ -86,23 +86,12 @@ include 'regis.php';
      <div class="col-md-6">
       <div class="input-group">
        <label>Confirm Password: </label> 
-       <input type="password" name="password" required>
-     </div>
-   </div>
-   <div class="col-md-6">
-     <div class="input-group">
-      <label>Year:</label> 
-       <select name="year">
-         <option value="1">year 1</option>
-         <option name="2">year 2</option>
-         <option name="3">year 3</option>
-         <option name="4">year 4</option>
-       </select>
+       <input type="password" name="password2" required>
      </div>
    </div>
  </div>
  <div class="col-md-6 col-md-offset-3">
-<div class="input-group"><button name="reg_student" class="btn" value="submit">Register</button></div>
+<div class="input-group"><button name="reg_student" class="btn" type="submit">Register</button></div>
 </div>
 <div class="col-md-8 col-md-offset-2" >
 <p>Already a user? <a href="login.php">Log in</a></p>

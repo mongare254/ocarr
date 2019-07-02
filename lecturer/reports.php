@@ -26,27 +26,8 @@
     </nav>
   </div><br><br><br><br><br><br>
   </header>
-<div><? echo $_SESSION['staffno'];?></div>
-  <div id="bord">
-    <div id="box" class="glow">Att<span>endance</span></div><br><br>
-    <div class=" content ">
-        </h3 >
-          </div>
-        <div class="hedge">
-          <form method="POST" action="#" >
-            <label>Course:</label><br>
-            <select class="placeholder">
-              <option value="course1" selected>COM 321</option>
-              <option value="course2">COM 326</option>
-              <option value="course3">COM 325</option>
 
-            </select><br>
-            <label>Code:</label><br>
-            <input type="number" name="lec_code" class="placeholder" placeholder="Code" minlength="4" maxlength="4"><br>
-            <div ><button class="btn-success" valu="submit">Assign Code</button></div>
-          </form>
-        </div>
-      </div>
+
     </body>
     <script type="text/javascript" src="js/jquery2.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

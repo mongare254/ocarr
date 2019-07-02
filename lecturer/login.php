@@ -1,4 +1,6 @@
-
+<?php
+require 'logis.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +12,16 @@
   <link href="font/css/font-awesome.css" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="images/asawa.jpg">
+  <style type="text/css">
+    .body{
+  background-image: url("img/mu.jpg");
+  background-size: cover;
+}
+  </style>
   <title>Ocar-lecturer</title>
     
 </head>
-<body>
+<body class="body">
   <header>
     <nav class="navver">
       <ul>
@@ -24,13 +32,15 @@
       <div id="bord">
       <div id="box" class="glow">LOGIN</div><br><br>
 <div class="hedge">
-  <form method="POST" action="#" >
-    <label>Email Address:</label><br>
-    <input type="email" name="lecmail" class="placeholder" placeholder="Enter Email address"><br>
+  <form method="POST" action="login.php">
+    <? php include ('errors.php');?>
+    <label>Staff No:</label><br>
+    <input type="number" name="staffno" class="placeholder" placeholder="Staff Number" required><br>
     <label>Password:</label><br>
-    <input type="password" name="lpassword" class="placeholder" placeholder="password"><br>
-    <div ><button class="btn-success">Log In</button></div>
+    <input type="password" name="lpassword" class="placeholder" placeholder="password" required><br>
+    <div ><button class="btn-success" name="login_user" type="submit">Log In</button></div>
     <p>Dont have an account? <a href="register.php">Register</a></p>
+        <p><a href="#">Forgot Password?</a></p>
   </form>
 </div>
 </div>

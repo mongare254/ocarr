@@ -17,7 +17,7 @@
 	<header>
 		<nav class="navver">
 			<ul>
-				<li >LE<span>CTURER PORTAL</span></li>
+				<li >LE<span class="glow">CTURER PORTAL</span></li>
 			</ul>
 		</nav><br><br><br><br><br><br>
 	</header>

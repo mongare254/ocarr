@@ -1,8 +1,16 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['admno'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+  }
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=yes">
 	<link href="#SSS" rel="stylesheet" type="text/css" />
 	<link href="css/ocar.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -20,12 +28,12 @@
           <a href ="#" class="navbar-brand">OCAR</a >
           <div style="margin-left: 40%" >
             <a href ="index.php">HOME </a >
-            <a href ="#">COURSES</a >
-            <a href ="#">REPORTS</a >
+            <a href ="courses.php">COURSES</a >
+            <a href ="reports.php">REPORTS</a >
             <a href ="profile.php">PROFILE</a >
           </div>
           <div id="out">
-            <a href ="logout">Log Out </a >
+            <a href ="logout.php">Log Out </a >
           </div>
         </div >
       </header><br>
@@ -37,11 +45,12 @@
      <h3>ANNOUNCEMENTS</h3>
    </div>
    <div class="col-md-6">
+    <div id="uto">
      <div class=" head ">
       <h2 >Sign Attendance</h2 >
     </div>
-    <form method=" post " action=" #">
-      <div class="content">
+    <div class="form-wrapper">
+    <form method=" post " action=" #">  
     <div class=" input-group ">
       <label >Course Code</label >
       <select>
@@ -58,9 +67,11 @@
         <div class=" input-group ">
           <button type =" submit " class=" btn" name=" sign_btn ">Sign Attendance </button>
         </div>
-      </div>
+      
        </form>
+       </div>
       </div>
+    </div>
   <div class="col-md-3">
  <h3>Lecturer Communication</h3>
 </div>
